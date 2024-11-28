@@ -13,6 +13,12 @@
     int id = Integer.parseInt(request.getParameter("id"));
     Player player = PlayerDAO.getPlayerById(id);
 %>
+<% if (request.getAttribute("errorMessage") != null) { %>
+<div style="color: red;">
+    <%= request.getAttribute("errorMessage") %>
+</div>
+<% } %>
+
 <html>
 <head>
     <title>Edit Player</title>

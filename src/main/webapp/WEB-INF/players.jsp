@@ -7,6 +7,11 @@
   Time: 6:21 PM
   To change this template use File | Settings | File Templates.
 --%>
+<% if (request.getAttribute("errorMessage") != null) { %>
+<div style="color: red;">
+  <%= request.getAttribute("errorMessage") %>
+</div>
+<% } %>
 
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
@@ -30,6 +35,41 @@
   <input type="text" name="team" required>
   <button type="submit" name="action" value="add">Add Player</button>
 </form>
+
+<script>
+  function validateForm() {
+    var name = document.getElementById("name").value.trim();
+    var age = document.getElementById("age").value.trim();
+    var position = document.getElementById("position").value.trim();
+    var team = document.getElementById("team").value.trim();
+
+    // Validate name
+    if (name === "") {
+      alert("Name is required.");
+      return false;
+    }
+
+    // Validate age
+    if (age === "" || isNaN(age) || age <= 0) {
+      alert("Age must be a valid positive number.");
+      return false;
+    }
+
+    // Validate position
+    if (position === "") {
+      alert("Position is required.");
+      return false;
+    }
+
+    // Validate team
+    if (team === "") {
+      alert("Team is required.");
+      return false;
+    }
+
+    return true;
+  }
+</script>
 
 <h3>Player List</h3>
 
