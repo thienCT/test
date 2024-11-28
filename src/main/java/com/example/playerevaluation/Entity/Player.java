@@ -1,4 +1,4 @@
-package com.example.playerevaluation.Model;
+package com.example.playerevaluation.Entity;
 
 public class Player {
     private int id;

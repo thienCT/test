@@ -1,6 +1,6 @@
 package com.example.playerevaluation.DAO;
 
-import com.example.playerevaluation.Model.Player;
+import com.example.playerevaluation.Entity.Player;
 
 import java.sql.*;
 import java.util.ArrayList;

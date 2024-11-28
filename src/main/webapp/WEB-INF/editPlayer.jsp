@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 
-<%@ page import="com.example.playerevaluation.Model.Player" %>
+<%@ page import="com.example.playerevaluation.Entity.Player" %>
 <%@ page import="com.example.playerevaluation.DAO.PlayerDAO" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%

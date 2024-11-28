@@ -1,16 +1,15 @@
-package com.example.playerevaluation.Servlet;
+package com.example.playerevaluation.Controller;
 
 import com.example.playerevaluation.DAO.PlayerDAO;
-import com.example.playerevaluation.Model.Player;
+import com.example.playerevaluation.Entity.Player;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
-import java.sql.SQLException;
 
-public class PlayerServlet extends HttpServlet {
+public class PlayerController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String action = req.getParameter("action");

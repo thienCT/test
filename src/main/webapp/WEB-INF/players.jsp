@@ -1,4 +1,4 @@
-<%@ page import="com.example.playerevaluation.Model.Player" %>
+<%@ page import="com.example.playerevaluation.Entity.Player" %>
 <%@ page import="java.util.List" %>
 <%@ page import="com.example.playerevaluation.DAO.PlayerDAO" %><%--
   Created by IntelliJ IDEA.
@@ -16,8 +16,10 @@
 <body>
 <h1>Player Management</h1>
 
-<form action="PlayerServlet" method="POST">
+<form action="PlayerController" method="POST">
+
   <h3>Add New Player</h3>
+
   <label>Name:</label>
   <input type="text" name="name" required>
   <label>Age:</label>
@@ -30,6 +32,7 @@
 </form>
 
 <h3>Player List</h3>
+
 <table border="1">
   <tr>
     <th>ID</th>
@@ -52,7 +55,7 @@
     <td><%= player.getTeam() %></td>
     <td>
       <a href="editPlayer.jsp?id=<%= player.getId() %>">Edit</a> |
-      <a href="PlayerServlet?action=delete&id=<%= player.getId() %>">Delete</a>
+      <a href="PlayerController?action=delete&id=<%= player.getId() %>">Delete</a>
     </td>
   </tr>
   <% } %>
